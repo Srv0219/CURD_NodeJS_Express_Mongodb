@@ -1,0 +1,4 @@
+REST API -> Http -> Get, Post, Patch ,Delete
+Express - web framework
+Node js - runtime
+Mongodb - compass
