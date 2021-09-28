@@ -18,13 +18,13 @@ router.get('/:id', async (req, res) => {
     // res.send('Get request');
     try {
         const Id = await Srvdetail.findById(req.params.id)
-        if (Id==null) {
-             res.send("Id not found")
-        }else{
+        if (Id == null) {
+            res.send("Id not found")
+        } else {
             res.json(Id)
-           
+
         }
-        
+
     } catch (err) {
         res.send('Error' + err)
     }
@@ -35,9 +35,9 @@ router.patch('/:id', async (req, res) => {
     // res.send('Get request');
     try {
         const change = await Srvdetail.findById(req.params.id)
-        change.age=req.body.age
+        change.age = req.body.age
         const a1 = await change.save()
-            res.json(a1)
+        res.json(a1)
 
 
     } catch (err) {
